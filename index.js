@@ -7,8 +7,8 @@ const blogRouter = require("./routes/blog");
 const tokenMiddleware = require("./middlewares/auth")
 
 app.use(express.json());
-// app.use(cors({ origin: "https://themarkblogr.netlify.app" }));
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://themarkblogr.netlify.app" }));
+// app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use("/api/account", authRouter);
 app.use("/api/blog",tokenMiddleware,blogRouter);
